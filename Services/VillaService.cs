@@ -16,11 +16,6 @@ namespace MagicVilla_Web.Services
             villaUrl = configuration.GetValue<string>("ServiceUrls:VillaAPI");
         }
 
-        public Task<T> SendAsync<T>(APIRequest apiRequest)
-        {
-            throw new NotImplementedException();
-        }
-
         public Task<T> CreateAsync<T>(VillaCreateDTO dto)
         {
             return SendAsync<T>(new APIRequest() { 
